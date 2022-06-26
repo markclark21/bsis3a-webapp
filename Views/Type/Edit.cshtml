@@ -1,0 +1,29 @@
+
+@model bsis3a_webapp.Models.ViewModels.TypeViewModel
+
+  
+
+<div class="mt-4">
+  <div class="row">
+      <div class="col-12">
+          <h2>Edit Type</h2>
+      </div>
+  </div>
+<form method="post">
+  <input asp-for="type.Id" hidden>
+  <div class="form-group">  
+    <label asp-for="items"></label>
+    <select asp-for="type.itemid" asp-items="Model.selectListItem(Model.items)" class="form-control" ></select>
+    <span asp-validation-for="items" class="text-danger"></span>
+  </div>
+  <div class="form-group">  
+    <label asp-for="type.Name"></label>
+    <input asp-for="type.Name" type="text" class="form-control">
+    <span asp-validation-for="type.Name" class="text-danger"></span>
+  </div>
+  <button type="submit" class="btn btn-primary">Update</button> 
+  <a asp-action="Index" class="btn btn-success" >Back</a>
+</form>
+
+</div>
+

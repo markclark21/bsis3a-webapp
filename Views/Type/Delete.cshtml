@@ -1,0 +1,27 @@
+
+@model bsis3a_webapp.Models.ViewModels.TypeViewModel
+
+  
+
+<div class="mt-4">
+  <div class="row">
+      <div class="col-12">
+          <h2>Delete Type</h2>
+      </div>
+  </div>
+<form method="post">
+  <input asp-for="type.Id" hidden>
+  <div class="form-group">  
+    <label asp-for="items"></label>
+    <select asp-for="type.itemid" disabled asp-items="Model.selectListItem(Model.items)" class="form-control" ></select>
+  </div>
+  <div class="form-group">  
+    <label asp-for="type.Name"></label>
+    <input asp-for="type.Name" disabled type="text" class="form-control">
+  </div>
+  <button type="submit" class="btn btn-danger">Delete</button> 
+  <a asp-action="Index" class="btn btn-success" >Back</a>
+</form>
+
+</div>
+
